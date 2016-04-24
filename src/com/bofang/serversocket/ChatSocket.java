@@ -16,7 +16,7 @@ public class ChatSocket extends Thread {
 
 	public void out(String out) {
 		try {
-			socket.getOutputStream().write(out.getBytes("UTF-8"));
+			socket.getOutputStream().write((out+"\n").getBytes("UTF-8"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -24,6 +24,7 @@ public class ChatSocket extends Thread {
 
 	@Override
 	public void run() {
+		out("You have connect to our server!");
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 			String line = null;

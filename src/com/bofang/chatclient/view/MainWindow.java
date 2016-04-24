@@ -1,13 +1,10 @@
 package com.bofang.chatclient.view;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.bofang.serversocket.ChatManager;
+import com.bofang.chatclient.main.ChatManager;
 
 import javax.swing.JTextArea;
 import javax.swing.GroupLayout;

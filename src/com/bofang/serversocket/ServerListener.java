@@ -12,6 +12,7 @@ public class ServerListener extends Thread {
 	public void run() {
 		try {
 			//port: 1-65535
+			@SuppressWarnings("resource")
 			ServerSocket serverSocket = new ServerSocket(12345);
 			while (true) {
 				//will block current thread
