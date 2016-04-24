@@ -18,8 +18,12 @@ public class ServerListener extends Thread {
 				Socket socket = serverSocket.accept();
 				//if connected:
 				JOptionPane.showMessageDialog(null, "one client conneted to port 12345");
+				
 				//pass socket to a new thread
-				new ChatSocket(socket).start();
+				ChatSocket cs = new ChatSocket(socket);
+				cs.start();
+				//and add to general manager
+				ChatManager.getChatManager().add(cs);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
