@@ -2,6 +2,8 @@ package com.bofang.serversocket;
 
 import java.util.Vector;
 
+import com.bofang.chatclient.view.MainWindow;
+
 public class ChatManager {
 	private ChatManager(){}
 	private static final ChatManager cm = new ChatManager();
@@ -21,5 +23,18 @@ public class ChatManager {
 				csChatSocket.out(out);
 			}
 		}
+	}
+	
+	MainWindow window;
+	public void setWindow(MainWindow window) {
+		this.window = window;
+		window.appendText("Window binded with Class: ChatManager");
+	}
+	
+	public void connect(String ip) {
+		
+	}
+	public void send(String out) {
+		
 	}
 }

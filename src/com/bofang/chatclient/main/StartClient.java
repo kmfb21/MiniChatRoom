@@ -3,6 +3,7 @@ package com.bofang.chatclient.main;
 import java.awt.EventQueue;
 
 import com.bofang.chatclient.view.MainWindow;
+import com.bofang.serversocket.ChatManager;
 
 public class StartClient {
 
@@ -13,6 +14,7 @@ public class StartClient {
 				try {
 					MainWindow frame = new MainWindow();
 					frame.setVisible(true);
+					ChatManager.getChatManager().setWindow(frame);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
